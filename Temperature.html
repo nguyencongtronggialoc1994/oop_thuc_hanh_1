@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPERATURE</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Temperature = function (celcius){
+        this.celcius = celcius;
+        this.getFahrenheit = function (){
+            return (celcius*1.8)+32;
+        }
+        this.getKenvin = function (){
+            return celcius+273.15;
+        }
+    }
+    let temperature = new Temperature(25);
+    let fahrenheit = temperature.getFahrenheit();
+    let khevin = temperature.getKenvin();
+    document.write("nhiet do fahrenheit la: "+ fahrenheit+"<br>"+"nhiet do khevin la: "+khevin);
+</script>
+</html>

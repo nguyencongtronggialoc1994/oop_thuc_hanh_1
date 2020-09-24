@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Cricle = function (radius) {
+        this.radius = radius;
+        this.getRadius = function () {
+            return this.radius;
+        }
+        this.getArea = function () {
+            return this.radius * this.radius * Math.PI;
+        }
+        this.setRadius = function (radius) {
+            this.radius = radius
+        }
+
+    }
+
+    let cricle = new Cricle(6);
+     cricle.setRadius(10);
+    let radius = cricle.getRadius();
+    let area = cricle.getArea();
+    document.write("radius:  " + radius + "<br>" + "area:  " + area);
+</script>
+</html>

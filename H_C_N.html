@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HINH CHU NHAT</title>
+</head>
+<body>
+<canvas id="mycanvas" width="1000px" height="600px" style="border: 2px solid green"></canvas>
+<p id="result"></p>
+</body>
+<script>
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.getAcreage = function () {
+            return this.width * this.height;
+        }
+        this.getPerimeter = function () {
+            return (this.width + this.height) * 2
+        }
+        this.setWidth = function (width) {
+            this.width = width;
+        }
+        this.setHeight = function (height) {
+            this.height = height;
+        }
+    }
+
+    let rectangle = new Rectangle(300, 200);
+    // rectangle.setWidth(200);
+    // rectangle.setHeight(100);
+    let width = rectangle.width;
+    let height = rectangle.height;
+    let getAcreage = rectangle.getAcreage();
+    let getPerimeter = rectangle.getPerimeter();
+    document.getElementById("result").innerHTML = width+","+height+","+getAcreage+","+getPerimeter;
+    let canvas = document.getElementById("mycanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle="red";
+    ctx.fillRect(100,100,width,height);
+</script>
+</html>
